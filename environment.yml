@@ -1,0 +1,24 @@
+# environment.yml
+# Conda environment specification for the read_pubs project
+#
+# To create this environment using mamba:
+# mamba env create -f environment.yml
+#
+# To activate the environment:
+# conda activate read-pubs-env
+#
+# To update the environment if this file changes:
+# mamba env update -f environment.yml --prune
+#
+name: read-pubs-env
+
+channels:
+  - conda-forge # Recommended channel for broader package availability
+
+dependencies:
+  - python>=3.8 # Specify a reasonable minimum Python version
+  - requests      # For making HTTP requests
+  - beautifulsoup4 # For parsing HTML (even if using regex initially)
+  - lxml          # Efficient parser backend for BeautifulSoup
+  - habanero      # For interacting with the CrossRef API (optional DOI finding strategy)
+  # Add any other libraries you might integrate later
